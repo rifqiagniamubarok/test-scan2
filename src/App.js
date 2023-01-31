@@ -27,8 +27,9 @@ function App() {
         style={previewStyle}
         onError={handleError}
         // legacyMode={legacy}
+        facingMode={isFace}
         onScan={handleScan}
-        constraints={{ facingMode: 'rear' }}
+        // chooseDeviceId={{ facingMode: 'front' }}
       />
       <div>
         <button onClick={() => setLegacy(!legacy)}>legacy</button>
