@@ -28,7 +28,7 @@ function App() {
         onError={handleError}
         // legacyMode={legacy}
         onScan={handleScan}
-        constraints={{ facingMode: 'environment' }}
+        constraints={{ facingMode: 'rear' }}
       />
       <div>
         <button onClick={() => setLegacy(!legacy)}>legacy</button>
