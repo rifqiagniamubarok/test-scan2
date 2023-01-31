@@ -6,6 +6,8 @@ function App() {
   const [delay, setDelay] = useState(100);
   const [result, setResult] = useState(null);
 
+  const [isFace, setIsFace] = useState(false);
+
   const [legacy, setLegacy] = useState(false);
   const handleError = (err) => {
     console.error(err);
@@ -24,12 +26,13 @@ function App() {
         delay={delay}
         style={previewStyle}
         onError={handleError}
-        facingMode="rear"
+        facingMode={isFace ? 'front' : 'rear'}
         legacyMode={legacy}
         onScan={handleScan}
       />
       <div>
         <button onClick={() => setLegacy(!legacy)}>legacy</button>
+        <button onClick={() => setIsFace(!isFace)}>fornt</button>
         <p>heloo : </p>
         <p>{result ? result?.text : 'noo'} </p>
       </div>
