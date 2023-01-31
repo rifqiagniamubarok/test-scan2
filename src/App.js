@@ -32,7 +32,7 @@ function App() {
       <div>
         <button onClick={() => setLegacy(!legacy)}>legacy</button>
         <button onClick={() => setIsFace(!isFace)}>fornt</button>
-        <p>heloo : </p>
+        <p>helooss : </p>
         <p>{result ? result?.text : 'noo'} </p>
       </div>
     </div>
