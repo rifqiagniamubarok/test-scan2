@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import QrReader from 'react-qr-scanner';
+import { QRScanner } from 'react-scanned-qr';
 import './App.css';
 
 function App() {
@@ -17,19 +17,17 @@ function App() {
     setResult(data);
   };
   const previewStyle = {
-    height: 240,
-    width: 320,
+    height: 400,
+    width: 400,
   };
   return (
     <div className="App">
-      <QrReader
+      <QRScanner
         delay={delay}
         style={previewStyle}
         onError={handleError}
         // legacyMode={legacy}
-        facingMode={isFace ? 'front' : 'rear'}
-        onScan={handleScan}
-        // chooseDeviceId={{ facingMode: 'front' }}
+        onScanned={handleScan}
       />
       <div>
         <button onClick={() => setLegacy(!legacy)}>legacy</button>
