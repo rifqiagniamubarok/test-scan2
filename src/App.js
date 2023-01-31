@@ -27,7 +27,7 @@ function App() {
         style={previewStyle}
         onError={handleError}
         // legacyMode={legacy}
-        facingMode={isFace}
+        facingMode={isFace ? 'front' : 'rear'}
         onScan={handleScan}
         // chooseDeviceId={{ facingMode: 'front' }}
       />
