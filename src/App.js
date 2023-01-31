@@ -23,6 +23,8 @@ function App() {
         delay={delay}
         style={previewStyle}
         onError={handleError}
+        facingMode="rear"
+        legacyMode={true}
         onScan={handleScan}
       />
       <div>
